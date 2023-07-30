@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link href="bootstrap-5.3.0-dist/css/bootstrap.min.css"  rel="stylesheet">
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet"href="bootstrap-5.3.0-dist/bootstrap-table.css">
+    <script src="bootstrap-5.3.0-dist/bootstrap-table.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.13.1/locale/bootstrap-table-zh-CN.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+<div class="title">
+    <h2>学生信息管理系统</h2>
+    <span></span>
+</div>
+<div id="upButton" class="upDiv" >
+    <div><a href="add"><span>新增</span></a></div>
+    <div><a  id="delete"><span>删除</span></a></div>
+</div>
+<div id="table" class="myTable " >
+    <form style="display: flex;justify-content: center" >
+    <table id="tb" class="table table-hover " data-toggle="table" >
+        <thead>
+        <tr>
+            <th id="tid">
+                <input type="checkbox" name="checkAll" id="checkAll">
+                <span>序号</span>
+            </th>
+            <th>
+                <span>学号</span>
+            </th>
+            <th>
+                <span>姓名</span>
+            </th>
+            <th>
+                <span>学院</span>
+            </th>
+            <th>
+                <span>专业</span>
+            </th>
+            <th>
+                <span>年级</span>
+            </th>
+            <th>
+                <span>班级</span>
+            </th>
+            <th>
+                <span>年龄</span>
+            </th>
+            <th>
+                <span>操作</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student:${studentList}">
+            <td>
+                <input type="checkbox" name="checkAll" th:id="check+${student.tid}">
+                <span th:text="${student.tid}"></span>
+            </td>
+            <td>
+                <span th:text="${student.id}"></span>
+            </td>
+            <td>
+                <span th:text="${student.name}"></span>
+            </td>
+            <td>
+                <span th:text="${student.college}"></span>
+            </td>
+            <td>
+                <span th:text="${student.major}"></span>
+            </td>
+            <td>
+                <span th:text="${student.grade}"></span>
+            </td>
+            <td>
+                <span th:text="${student.clazz}"></span>
+            </td>
+            <td>
+                <span th:text="${student.age}"></span>
+            </td>
+            <td>
+                <a th:href="@{updateStudent(id=${student.tid})}" ><span>查看</span></a>
+                <a th:href="@{updateStudent(id=${student.tid})}" ><span>修改</span></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </form>
+</div>
+</body>
+<script src="js/table.js"></script>
+</html>

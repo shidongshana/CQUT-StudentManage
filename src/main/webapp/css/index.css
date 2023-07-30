@@ -1,0 +1,194 @@
+* body{
+    background-color: rgb(246, 242, 217);
+}
+
+
+.title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.title span{
+    margin: 0 auto;
+    display: block;
+    border: 1px black solid;
+    width: 80%;
+    position: relative;
+    top: -15px;
+    z-index: -1;
+}
+.title h2{
+    background-color: rgb(246, 242, 217);
+    width: 20%;
+    margin: 0 auto;
+}
+.title h2,p{
+    text-align: center;
+}
+.upDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+
+}
+.upDiv div{
+    margin-left: 20px;
+    height: 80%;
+    width: 120px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.upDiv div:nth-child(1){
+    margin-left: 5%;
+}
+.upDiv div:nth-child(2){
+    transition-duration: 300ms;
+    background-color: #d30707;
+}
+.upDiv div:nth-child(1){
+    transition-duration: 300ms;
+    background-color: #2e7d32;
+}
+.upDiv div a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.upDiv div:nth-child(1):hover{
+    transition-duration: 300ms;
+    transform: translateY(-2px);
+    background-color: rgba(46, 125, 50, 0.8);
+}
+.upDiv div:nth-child(2):hover{
+    transition-duration: 300ms;
+    transform: translateY(-2px);
+    background-color: rgba(211, 7, 7, 0.8);
+}
+
+.upDiv span{
+  color: #ffffff;
+}
+.myTable{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-spacing: 0px;
+    display: flex;
+    justify-content: center;
+
+}
+.myTable form table{
+    width: 100%;
+    border : 1px solid #ccc;
+    border-collapse: collapse;
+}
+.myTable form table thead tr th{
+    height: 50px;
+    text-align: center;
+    padding: 0px;
+    background-color: rgba(24, 20, 20, 0.27);
+}
+.myTable form table thead tr th:nth-child(1) input{
+    margin-left: 22px;
+}
+
+
+.myTable form table tbody tr td{
+    height: 25px;
+    text-align: center;
+    padding: 5px;
+}
+.myTable form table tbody tr td{
+    height: 25px;
+    text-align: center;
+    padding: 5px;
+}
+.myTable form table tbody tr td a{
+    color: red;
+    cursor: pointer;
+}
+.myTable form table tbody tr td:nth-child(1){
+    width: 10%;
+}
+.myTable form table tbody tr:nth-child(odd){
+    background-color: rgba(100, 149, 237, 0.18);
+}
+.myTable form{
+    width: 100%;
+   justify-content: center;
+}
+*form{
+    display: flex;
+    justify-content: center;
+}
+.downBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.downDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+.downDiv div{
+    margin-left: 15px;
+    height: 80%;
+    width: 120px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.downDiv div a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.downDiv div:nth-child(2){
+    background-color: #d30707;
+}
+.downDiv div:nth-child(1){
+    background-color: #41d730;
+}
+.downText{
+    margin-left: 25px;
+}
+.table tbody tr:nth-child(even){
+    --bs-table-bg: rgba(100, 149, 237, 0.29);
+}
+.table tbody tr a {
+    color: red;
+    cursor: pointer;
+}
+.bootstrap-table {
+    width: 90%;
+}
+.bootstrap-table .fixed-table-pagination > .pagination-detail .page-list {
+   display: none;
+}

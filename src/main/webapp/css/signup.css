@@ -1,0 +1,68 @@
+* body{
+
+    background: url("https://p0.meituan.net/csc/8a5730d4ecdee6de25f9285187cb66b1239238.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+.div1{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.div2{
+    width: 400px;
+    height: 500px;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+.div2 form div{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.div2 form{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.div2 form div input{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+.div2 form div:nth-child(4) button{
+    transition-duration: 300ms;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+.div2 form div:nth-child(4) button:hover{
+    transition-duration: 300ms;
+    background-color: rgba(255, 255, 255, 0.37);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.div2 form div:nth-child(4){
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/updateStudent.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="addDiv" >
+    <div class="addDiv2">
+        <form action="updateStudent" method="post">
+            <table>
+             <tr th:each="upStudent:${upStudentlist}">
+                 <td>
+                     <span>学号</span>
+                     <input type="text" name="id" th:value="${upStudent.id}">
+                 </td>
+                 <td>
+                     <span>姓名</span>
+                     <input type="text" name="name" th:value="${upStudent.name}">
+                    </td>
+                    <td>
+                        <span>学院</span>
+                        <input type="text" name="college" th:value="${upStudent.college}">
+                    </td>
+                    <td>
+                        <span>专业</span>
+                        <input type="text" name="major" th:value="${upStudent.major}">
+                    </td>
+                    <td>
+                        <span>年级</span>
+                        <input type="text" name="grade" th:value="${upStudent.grade}">
+                    </td>
+                    <td>
+                        <span>班级</span>
+                        <input type="text" name="clazz" th:value="${upStudent.clazz}">
+                    </td>
+                    <td>
+                        <span>年龄</span>
+                        <input type="text" name="age" th:value="${upStudent.age}">
+                    </td>
+                    <td>
+                        <input type="submit" value="修改">
+                    </td>
+             </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
